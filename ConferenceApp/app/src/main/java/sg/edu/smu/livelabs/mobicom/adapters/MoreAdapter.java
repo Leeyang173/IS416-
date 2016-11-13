@@ -73,6 +73,7 @@ public class MoreAdapter extends BaseAdapter {
     public static final int YOUR_SG = 17;
     public static final int ABOUT_US = 18;
 //    public static final int AWARDS = 19;
+    public static final int NAVIGATION = 20;
 
     private Context context;
     private MainActivity mainActivity;
@@ -97,6 +98,7 @@ public class MoreAdapter extends BaseAdapter {
 //        this.items.add(new Item("Your SG", YOUR_SG, R.drawable.icon_sg, ContextCompat.getColor(context, R.color.colorPrimary)));
         this.items.add(new Item("About Us", ABOUT_US, R.drawable.icon_aboutus, ContextCompat.getColor(context, R.color.colorPrimary)));
         this.items.add(new Item("Games", GAMES, R.drawable.icon_game, ContextCompat.getColor(context, R.color.colorPrimary)));
+        this.items.add(new Item("Navigation", GAMES, R.drawable.icon_navi, ContextCompat.getColor(context, R.color.colorPrimary)));
 //        this.items.add(new Item("Awards", AWARDS, R.drawable.icon_award, ContextCompat.getColor(context, R.color.colorPrimary)));
         Collections.sort(items, new Comparator<Item>() {
             @Override
