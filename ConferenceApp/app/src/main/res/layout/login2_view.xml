@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.Login2View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/background_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/login_bg"
+            android:scaleType="centerCrop"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/triangle_shape"
+            android:alpha="0.4"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/background_view">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/welcome_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:text="Welcome to"/>
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/mobicom2016_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="45sp"
+                        android:textColor="@color/white"
+                        android:text="MobiCom2016"/>
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/the_fourteenth_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:text="The 22nd Annual International Conference on Mobile Computing and Networking"/>
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/june_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="5dp"
+                        android:text="October 3rd - 7th, 2016 New York"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp">
+                <View
+                    android:alpha="0.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:visibility="gone"/>
+                <ImageView
+                    android:id="@+id/qr_code_im"
+                    android:clickable="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/qr_code"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@color/colorPrimaryDark"
+                    android:alpha="0.7"/>
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/start_tv"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:text="START"/>
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/scan_the_qr_tv"
+                    android:layout_below="@id/qr_code_im"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:text="Scan the QR code on\nyour conference badge/email"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</sg.edu.smu.livelabs.mobicom.views.Login2View>

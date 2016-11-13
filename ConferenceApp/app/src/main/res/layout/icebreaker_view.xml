@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.IceBreakerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45">
+
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveLoadingView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Generating your QR Code"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="@color/dark_grey"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.55"
+            android:orientation="vertical"
+            android:layout_below="@+id/waveLoadingView"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.65"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Story"
+                        android:textSize="@dimen/text_size_super_large"
+                        android:gravity="center"
+                        android:textColor="@color/dark_grey"/>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_large"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"/>
+
+                    </ScrollView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/dark_grey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/current_friend_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:paddingTop="10dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/avatar_image"
+                                android:layout_width="@dimen/item_height_small"
+                                android:layout_height="@dimen/item_height_small"
+                                android:src="@drawable/empty_profile"/>
+
+                            <TextView
+                                android:id="@+id/current_friend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="18"
+                                android:gravity="center_horizontal"
+                                android:textSize="@dimen/text_size_super_super_large"
+                                android:padding="5dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Friends"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size_normal"
+                            android:padding="5dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp">
+
+                        <ImageView
+                            android:id="@+id/leaderboard"
+                            android:layout_width="@dimen/item_height"
+                            android:layout_height="@dimen/item_height"
+                            android:src="@drawable/icon_ranking_new"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ranking"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size_normal"
+                            android:padding="5dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scan QR Code"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_button_blue"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/no_internet_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_internet_connection"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</sg.edu.smu.livelabs.mobicom.views.IceBreakerView>

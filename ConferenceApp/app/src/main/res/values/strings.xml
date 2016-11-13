@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">MobiCom 2016</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title_cap">MobiCom 2016</string>
+    <!--photo-->
+    <string name="cannot_use_image">Unable to use this image!</string>
+    <string name="cannot_upload_photo">Unable to upload photo at this moment.</string>
+    <string name="error_occurred">Error occurred. Please try again later.</string>
+    <string name="saved_photo">Photo saved in your gallery.</string>
+
+    <string name="permission_denied">This app does not have access to your phone content. Please go to settings -> apps to change permissions. </string>
+    <string name="messages">Messages</string>
+    <string name="games">Games</string>
+    <string name="attendees">Attendees</string>
+    <string name="agenda">Agenda</string>
+    <string name="Home">HOME</string>
+    <string name="more">More</string>
+    <string name="author">Chairs/Speakers: </string>
+    <string name="rate_this_talk">(Rate this talk)</string>
+    <string name="average_rating">Average rating</string>
+    <string name="overview">Overview</string>
+    <string name="quiz">Quiz</string>
+    <string name="comments">Comments</string>
+    <string name="keynote"> Keynote </string>
+    <string name="speaker"> Speaker </string>
+    <string name="forum">Forum</string>
+    <string name="recommend">Recommend</string>
+    <string name="contacts">Contacts</string>
+    <string name="search">Search</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="confirm">Confirm</string>
+    <string name="progressing">Processing</string>
+    <string name="loading">Loading</string>
+    <string name="login_fail">Invalid QR code. Please try again.</string>
+    <string name="no_internet_connection1"> Network not available</string>
+    <string name="please_check_internet"> Please check your network.</string>
+    <string name="type_your_message">Enter message</string>
+    <string name="type_your_comment">Enter your comment</string>
+    <string name="type_your_topic">Enter your topic</string>
+    <string name="be_first_to_comment"> Be first to comment</string>
+    <string name="NoRecent">No recent</string>
+    <string name="file_not_support">File type not supported. Please try again.</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="view_all">View all >></string>
+    <string name="activity">Activities</string>
+    <string name="leader_board">Leaderboard</string>
+    <string name="try_these_games">Take a break, try these games!</string>
+    <string name="download_moonreader">Please install EPUB reader to open this file. Download \'Moon Reader\' (recommended)?</string>
+    <string name="download_drive">Please install PDF reader to open this file. Download \’Google Drive\’(recommended)?</string>
+    <string name="empty_bookmark">No bookmarked events on this day</string>
+    <string name="empty_agenda">No events on this day</string>
+    <!--chat-->
+    <string name="create_group_chat_error">Unable to process your request at this moment. Please try again later.</string>
+    <string name="empty_group_title">Please enter group title.</string>
+    <string name="no_friends">Please add at least one member to this group.</string>
+    <string name="delete_chat_room_error">Unable to delete this conversation at this moment. Please try again later</string>
+    <string name="leave_chat_room_error">Unable to leave this chat group at this moment. Please try again later</string>
+    <string name="error_chat_send">Unable to send message..</string>
+    <string name="disable_chat_group_send">Chat is disabled.</string>
+    <!--guide-->
+    <string name="guide1_title">Hi There!</string>
+    <string name="guide1">Welcome to Mobicom 2016! I will be guiding you on how to use this app. \nFirst, can I get you to verify the following details? </string>
+    <string name="is_this_your_name">Your name:</string>
+    <string name="are_you_from_this_organisation">Your organisation</string>
+    <string name="do_you_look_like">Do you look like this?</string>
+    <string name="please_enter_your_name">Please enter your name.</string>
+    <string name="please_enter_your_organisation">Please enter your organisation.</string>
+    <string name="guide2_title">Almost There</string>
+    <string name="guide2">Next, please select your research area. You may select one or more research area.</string>
+    <string name="game_guide">At this GAMES section, we hope that you will participate and have fun! Whether you are networking or just taking a break, there are activities available within this conference.</string>
+    <string name="guide_home">Thank you for your patience. Welcome to the Mobicom 2016 App. </string>
+    <!-- Games -->
+    <string name="no_internet_connection">Please check your network? </string>
+    <string name="earn_more_points"><u>How to earn more points</u></string>
+    <string name="chronometer_initial_format">%s</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="please_enter_email">Please enter your registered email.</string>
+    <string name="please_check_your_email">Please check your email.</string>
+    <string name="scavenger_story">-</string>
+    <string name="ice_breaker_story">-</string>
+    <string name="coolfie_story">-</string>
+    <string name="favorite_story">-</string>
+
+    <!-- Leaderboard -->
+    <string name="no_leaderboard">Leaderboard currently not available. Please try again later</string>
+    <string name="no_badge">Badges list cannot be loaded, Please try again later.</string>
+
+    <!-- DEMO -->
+    <string name="appoach_demo">Appoach a demo booth to unlock more content.</string>
+    <string name="turn_on_bluetooth">Have your Bluetooth Service turn on to see exciting demos!</string>
+    <string name="no_bluetooth">This feature require Bluetooth!</string>
+    <string name="location_access_title">This app need location access</string>
+    <string name="grant_location_access">Please grant location access so for app to detect demos.</string>
+    <string name="gps">Your GPS seems to be disabled, do you want to enable it?</string>
+
+    <!-- Favorite -->
+    <string name="favorite_start_from">This voting will start from \n</string>
+    <string name="no_voting">Awards currently not available. Please try again later</string>
+
+    <!-- Hunt -->
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="disband">Disband</string>
+    <string name="start_hunt">Start Hunt</string>
+    <string name="team_members">Team Members</string>
+    <string name="des">Description</string>
+
+    <!-- Polling -->
+    <string name="no_poll">Polling currently not available. Please try again later</string>
+    <string name="complete">You have completed this poll.</string>
+
+    <!-- Memories -->
+    <string name="memories_no_photos">It seems like there is no memory at the moment. Try again later.</string>
+
+    <!-- Coolfie -->
+    <string name="title_activity_to_s">ToSActivity</string>
+    <string name="title_activity_selfe">SelfeActivity</string>
+    <string name="recent">Recent</string>
+    <string name="type">1</string>
+    <string name="view">2</string>
+    <string name="coming_soon">COMING SOON</string>
+    <string name="no_cmp">There are no competitions running currently.</string>
+    <string name="cmp_start_from">This Competition will start from \n</string>
+    <string name="like_disable">\'Like\' is currently disabled.</string>
+    <string name="like_fail">\'Like\' fail. Please try again.</string>
+    <string name="cmp_no_photos">Tap to share</string>
+    <string name="type_to_search_for_photo_people">Type to search for photos or people.</string>
+    <string name="type_to_search">Type to search</string>
+    <string name="short_search_term">Search term too short.</string>
+    <string name="say_some_thing">Say something about your photo</string>
+    <string name="upload_fail">Upload failed. Please try again.</string>
+    <string name="edit_caption_fail">Editing caption fail. Please try again.</string>
+    <string name="long_press_to_copy_token">Long press on a photo to copy token \n and send it to your friends to vote.</string>
+    <string name="you_have_not_submitted_any_photo">No memories shared</string>
+    <string name="has_not_submitted_any_photo"> hasn\'t submitted any photos yet.</string>
+    <string name="token_has_copied">Token: %s has been copied.</string>
+    <string name="avatar_updated">Avatar updated successfully.</string>
+    <string name="cover_updated">Cover photo updated successfully.</string>
+    <string name="confirm_saving_photo">Would you like to save this photo to your phone gallery?</string>
+    <string name="unable_to_save_photo">Unable to save photo. Please try again later.</string>
+    <string name="confirm_delete_photo">Do you want to delete this photo?</string>
+    <string name="cannot_delete_photo">Unable to delete this photo at the moment. Please try again later.</string>
+    <string name="reported">You have already reported this photo before. Thank you!</string>
+    <string name="confirm_report_photo">Would you like to report this photo?</string>
+    <string name="thanks_report">Thank you for your feedback!</string>
+    <string name="choose_an_item_to_continues">Select a photo competition</string>
+    <!--feedback-->
+    <string name="select_feedback_type">Select feedback type</string>
+    <string name="your_feedback_">Your feedback...</string>
+    <string name="_note_your_email_will_be_sent_along_with_your_message_so_that_we_can_contact_you_">* Note: Your email will be sent along with your message so that we can contact you.</string>
+    <!--inbox-->
+    <string name="mask_all_as_read">Are you sure you want to mark all unread notifications as read?</string>
+</resources>

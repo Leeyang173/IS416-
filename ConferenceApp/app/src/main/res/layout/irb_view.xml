@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.IRBView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/agree_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:text="Agree &amp; Continue"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"/>
+    <TextView
+        android:id="@+id/no_result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/agree_btn"
+        android:gravity="center"
+        android:hint="Oops! please check your internet connection to confirm  the IRB."
+        android:textSize="@dimen/text_size_large"
+        android:singleLine="true"
+        android:background="@color/white"/>
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/agree_btn"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_WV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:indeterminate="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_large"
+        android:layout_below="@+id/progress_WV"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+</sg.edu.smu.livelabs.mobicom.views.IRBView>

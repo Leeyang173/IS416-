@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.InboxView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_size_super_large"
+        android:gravity="center"
+        android:hint="No Data"
+        />
+    <TextView
+        android:id="@+id/mark_all_as_read_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:text="Mark all as read"
+        android:background="@drawable/btn_background_color_secondary"/>
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:layout_below="@id/mark_all_as_read_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/list_view"
+        android:background="@color/white"
+        app:recyclerviewClipToPadding="true"
+        app:recyclerviewEmptyView="@layout/empty_view2">
+    </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+
+</sg.edu.smu.livelabs.mobicom.views.InboxView>

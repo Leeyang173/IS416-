@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_title_size">17sp</dimen>
+    <dimen name="text_size_super_super_large">35sp</dimen>
+    <dimen name="text_size_super_large">20sp</dimen>
+    <dimen name="text_size_large">15sp</dimen> // 13
+    <dimen name="text_size_normal">13sp</dimen> // 12
+    <dimen name="text_size_small">11sp</dimen> // 10
+    <dimen name="text_size_super_small">9sp</dimen>
+    <dimen name="text_size_super_super_small">7dp</dimen>
+    <dimen name="slider_height">200dp</dimen>
+    <dimen name="circle_height">96dp</dimen>
+    <dimen name="item_height_small_small">25dp</dimen>
+    <dimen name="item_height_small">42dp</dimen>
+    <dimen name="item_height">50dp</dimen>
+    <dimen name="item_height_large">65dp</dimen>
+    <dimen name="club_logo_size">60dp</dimen>
+    <dimen name="icon_size_large">27dp</dimen>
+    <dimen name="icon_size">15dp</dimen>
+    <dimen name="dot_size">10dp</dimen>
+    <dimen name="inset_spacing">12dp</dimen>
+    <dimen name="beacon_arrow_spacing">20dp</dimen>
+    <dimen name="beacon_max_top_padding">22dp</dimen>
+    <dimen name="beacon_min_top_padding">15dp</dimen>
+    <dimen name="scavenger_right_margin">90px</dimen>
+</resources>

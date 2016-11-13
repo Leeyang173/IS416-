@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_normal"
+            android:singleLine="false"
+            android:text="Paper 1"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:id="@+id/description_txt"
+            android:layout_below="@id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="italic"
+            android:text="Title \n a"
+            android:maxLines="2"
+            android:layout_marginRight="40dp"
+            />
+        <TextView
+            android:id="@+id/rating_txt"
+            android:layout_below="@id/description_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="italic"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Quiz/Rating is available."
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/more_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_arrow_right_grey_1"/>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    

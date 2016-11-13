@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.AgendaPaperView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:id="@+id/paperListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:recyclerviewEmptyView="@layout/empty_view2">
+
+    </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+
+
+</sg.edu.smu.livelabs.mobicom.views.AgendaPaperView>

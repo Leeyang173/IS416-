@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp">
+            <View
+                android:id="@+id/background_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:alpha="0.6"/>
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/avatar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar_image"
+                            android:layout_width="@dimen/item_height_small"
+                            android:layout_height="@dimen/item_height_small"
+                            android:src="@drawable/icon_no_profile"/>
+
+                        <TextView
+                            android:id="@+id/name_short_form"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_vertical|right"
+                            android:text="Rank"/>
+
+                        <TextView
+                            android:id="@+id/points_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_super_large"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_vertical"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_below="@id/avatar_container"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:maxLength="20"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

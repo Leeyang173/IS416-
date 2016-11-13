@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.BeaconView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/main_details_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:id="@+id/beacon_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <View
+                        android:id="@+id/list_overlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_grey"
+                        android:layout_alignTop="@+id/beacon_list"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/webview_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/list_container">
+
+                    <LinearLayout
+                        android:id="@+id/star_layout"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/star_container"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="0.78"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/star1"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_rate"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:clickable="true"/>
+                            <ImageView
+                                android:id="@+id/star2"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_rate"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:clickable="true"/>
+                            <ImageView
+                                android:id="@+id/star3"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_rate"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:clickable="true"/>
+                            <ImageView
+                                android:id="@+id/star4"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_rate"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:clickable="true"/>
+                            <ImageView
+                                android:id="@+id/star5"
+                                android:padding="5dp"
+                                android:src="@drawable/icon_rate"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:clickable="true"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/pdf_container"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.22"
+                            android:layout_gravity="center_vertical|right"
+                            android:gravity="center_vertical|right">
+
+                            <ImageView
+                                android:id="@+id/pdf_image"
+                                android:clickable="true"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/icon_pdf"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+                    <WebView
+                        android:id="@+id/webView"
+                        android:layout_width="400dp"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/star_layout"/>
+
+
+
+                    <ProgressBar
+                        android:id="@+id/progress_WV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:indeterminate="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/scanning_msg_WV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Loading exciting contents..."
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/progress_WV"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/close_webview"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@drawable/custom__beacon_button_orange"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_super_super_large"
+                    android:layout_alignParentRight="true"
+                    android:text=">"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_marginRight="-25dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calibrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:background="@drawable/custom_button_white">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Calibrating..."
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</sg.edu.smu.livelabs.mobicom.views.BeaconView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/user_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_marginTop="7dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/empty_profile_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/empty_profile_background"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="#ffffff"
+                android:gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/empty_profile"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profile_layout"
+            android:text="name"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/text_color"/>
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profile_layout"
+            android:layout_below="@id/name_tv"
+            android:text="des"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/text_color"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

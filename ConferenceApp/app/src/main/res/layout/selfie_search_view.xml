@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.SelfieSearchView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_gravity="top">
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="#E2E2E2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/search_background">
+            <RelativeLayout
+                android:id="@+id/search_btn"
+                android:clickable="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_search_background"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/icon_search_nobg_normal"/>
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/search_edit_Text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_search_background"
+                android:hint="Search..."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                android:paddingLeft="5dp"
+                android:layout_toLeftOf="@id/search_btn"
+                android:lines="1"
+                android:singleLine="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/search_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/search_layout"/>
+    <TextView
+        android:id="@+id/no_result_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout"
+        android:background="@color/white"
+        android:hint="@string/type_to_search_for_photo_people"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+</sg.edu.smu.livelabs.mobicom.views.SelfieSearchView>

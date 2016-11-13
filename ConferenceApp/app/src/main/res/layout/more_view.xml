@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.MoreView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
+    <LinearLayout
+        android:id="@+id/term_and_conditions_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/term_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:gravity="right"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="@dimen/text_size_normal"
+            android:text="TERMS AND CONDITIONS"
+            android:clickable="true"/>
+        <TextView
+            android:id="@+id/privacy_policy_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_normal"
+            android:clickable="true"
+            android:text="PERSONAL DATA PROTECTION POLICY"/>
+
+        <TextView
+            android:id="@+id/version_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_normal"
+            android:clickable="true"
+            android:text=""/>
+    </LinearLayout>
+    <GridView
+        android:layout_margin="10dp"
+        android:id="@+id/more_grid"
+        android:layout_above="@id/term_and_conditions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp">
+    </GridView>
+
+
+
+</sg.edu.smu.livelabs.mobicom.views.MoreView>

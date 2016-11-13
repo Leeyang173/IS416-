@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.AgendaTabView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:layout_margin="3dp"
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:recyclerviewClipToPadding="false"
+        app:recyclerviewEmptyView="@layout/empty_view2">
+
+    </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+    <TextView
+        android:id="@+id/empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large"/>
+</sg.edu.smu.livelabs.mobicom.views.AgendaTabView>

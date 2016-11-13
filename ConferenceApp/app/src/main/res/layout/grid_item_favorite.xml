@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:background="@drawable/round_rect_shape">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/image_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_image"
+                    android:layout_width="@dimen/item_height_large"
+                    android:layout_height="@dimen/item_height_large"
+                    android:src="@drawable/noavatar"/>
+
+                <TextView
+                    android:id="@+id/name_short_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:lines="2"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"/>
+
+</LinearLayout>

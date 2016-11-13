@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.PrizesView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_WV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:indeterminate="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:layout_below="@+id/progress_WV"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/grey"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="0.5"-->
+                        <!--android:gravity="left|center"-->
+                        <!--android:text="My Current Points"-->
+                        <!--android:textColor="@color/black"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/current_points"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="0.5"-->
+                        <!--android:gravity="right|center"-->
+                        <!--android:text="22"-->
+                        <!--android:textColor="@color/black"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<sg.edu.smu.livelabs.conferenceapp.views.CustomGridView-->
+                    <!--android:id="@+id/prizes"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:numColumns="3"-->
+                    <!--android:verticalSpacing="10dp"-->
+                    <!--android:horizontalSpacing="10dp"-->
+                    <!--android:padding="5dp"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/grey"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:paddingBottom="5dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="left"-->
+                        <!--android:text="How to earn more points?"-->
+                        <!--android:textColor="@color/black"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<sg.edu.smu.livelabs.conferenceapp.views.CustomGridView-->
+                    <!--android:id="@+id/games"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:numColumns="3"-->
+                    <!--android:verticalSpacing="10dp"-->
+                    <!--android:horizontalSpacing="10dp"-->
+                    <!--android:padding="5dp"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</ScrollView>-->
+
+    </LinearLayout>
+
+</sg.edu.smu.livelabs.mobicom.views.PrizesView>

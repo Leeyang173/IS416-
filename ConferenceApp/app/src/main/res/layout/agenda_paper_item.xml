@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    >
+    <ImageView
+        android:id="@+id/icon_epub"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/icon_epub"/>
+    <ImageView
+        android:id="@+id/icon_pdf"
+        android:layout_toLeftOf="@id/icon_epub"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/icon_pdf"/>
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/icon_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_weight="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffcccccc"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"/>
+</RelativeLayout>

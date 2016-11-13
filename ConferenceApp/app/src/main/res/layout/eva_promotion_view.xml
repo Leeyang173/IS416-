@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.EVAPromotionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/no_result_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:hint="@string/no_cmp"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/choose_tem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="#D3DADC"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/text_size_normal"
+        android:text="@string/choose_an_item_to_continues"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/choose_tem">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_normal"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"/>
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp">
+        </ListView>
+
+
+    </LinearLayout>
+
+
+
+</sg.edu.smu.livelabs.mobicom.views.EVAPromotionView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<item android:state_checked="true" android:color="#00000000">-->
+        <!--<inset-->
+            <!--android:drawable="@drawable/option_s"-->
+            <!--android:insetTop="@dimen/item_height"-->
+            <!--android:insetRight="@dimen/item_height"-->
+            <!--android:insetBottom="@dimen/item_height"-->
+            <!--android:insetLeft="@dimen/item_height" />-->
+    <!--</item>-->
+
+    <!--<item android:state_pressed="true" android:color="#00000000">-->
+        <!--<inset-->
+            <!--android:drawable="@drawable/option_s"/>-->
+    <!--</item>-->
+    <!--<item  android:color="#00000000">-->
+
+        <!--<inset-->
+            <!--android:drawable="@drawable/option_n"-->
+            <!--android:insetTop="@dimen/item_height"-->
+            <!--android:insetRight="@dimen/item_height"-->
+            <!--android:insetBottom="@dimen/item_height"-->
+            <!--android:insetLeft="@dimen/item_height" />-->
+    <!--</item>-->
+
+<!--</selector>-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true"
+        android:drawable="@drawable/option_s">
+        <size android:width="5dp"
+            android:height="5dp" />
+
+    </item>
+    <item android:state_pressed="true"
+        android:drawable="@drawable/option_s" >
+        <size android:width="5dp"
+            android:height="5dp" />
+    </item>
+    <item android:drawable="@drawable/option_n" >
+        <size android:width="5dp"
+            android:height="5dp" />
+    </item>
+</selector>

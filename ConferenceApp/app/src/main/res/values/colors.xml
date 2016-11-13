@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0078d7</color>
+    <color name="colorPrimaryDark">#ff002050</color>
+    <color name="colorPrimaryLight2">#ff00bcf2</color>
+    <color name="colorPrimaryLight">#ffe5f8fe</color>
+    <color name="colorPrimaryGrey">#ff505050</color>
+    <color name="header">#ffff793b</color>
+
+    <color name="title_background_color">#ff505050</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <color name="text_title_color">#FFFFFF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="background_color">#FFFFFFFF</color>
+    <color name="dialog_title_color_default">#ff004ebc</color>
+    <color name="dialog_content_color_default">#ff0078d7</color>
+    <color name="dialog_btn_txt_color_default">#ff0078d7</color>
+    <color name="dialog_btn_press_color">#FFcccccc</color>
+    <color name="dialog_background_color">#ddffffff</color>
+    <color name="gray">#ff6d6d6c</color>
+
+    <!-- Agenda -->
+    <color name="text_color">#FF000000</color>
+    <color name="text_likes_color">#FFf04e23</color>
+    <color name="btn_text_color_disable">#FF000000</color>
+    <color name="btn_text_color_normal">#ff000000</color>
+    <color name="btn_text_color_selected">#ffffffff</color>
+    <color name="btn_text_color_selected_main">#ff0078d7</color>
+    <color name="btn_background_color_disable">#ff969696</color>
+    <color name="btn_background_color_normal">#ff0078d7</color>
+    <color name="btn_background_color_selected">#ff002050</color>
+
+    <!-- bottom bar -->
+    <color name="divider">#FFC7C7C9</color>
+    <color name="bottom_bar_color">#ffffffff</color>
+    <color name="bottom_bar_text_color_disable">#aeafb1</color>
+    <color name="bottom_bar_text_color_normal">#ffcccccc</color>
+    <color name="bottom_bar_text_color_selected">#ff2a94e8</color>
+    <color name="transparent">#00000000</color>
+
+    <!--crop Image-->
+    <color name="base">#00FFFFFB</color>
+    <color name="overlay1">#AA1C1C1C</color>
+    <color name="handle">#86C166</color>
+    <color name="frame">#86C166</color>
+    <color name="guide">#AA86C166</color>
+
+    <!-- Games -->
+    <item name="game_text_bg" type="color">#66000000</item>
+    <item name="white" type="color">#FFFFFF</item>
+    <item name="light_blue" type="color">#d8ebf8</item>
+    <item name="black" type="color">#000000</item>
+    <item name="medium_grey" type="color">#696969</item>
+    <item name="grey" type="color">#dedede</item>
+    <item name="dark_grey" type="color">#2e2e2e</item>
+    <item name="avatar_grey" type="color">#808080</item>
+    <item name="red" type="color">#ff343e</item>
+    <item name="light_orange" type="color">#fab89b</item>
+    <item name="orange" type="color">#f4aa00</item>
+    <item name="emerald" type="color">#2ecc71</item>
+    <item name="carrot" type="color">#e67e22</item>
+    <item name="wisteria" type="color">#8e44ad</item>
+    <item name="pomegranate" type="color">#c0392b</item>
+    <item name="overlay" type="color">#882e2e2e</item>
+    <item name="transparent_blue" type="color">#882a94e8</item>
+    <item name="transparent_green" type="color">#882ecc71</item>
+    <item name="transparent_grey" type="color">#882e2e2e</item>
+    <color name="blue" type="color">#2a94e8</color>
+    <item name="secondary_blue" type="color">#52a6ec</item>
+    <item name="aqua" type="color">#7FDBFF</item>
+    <item name="teal" type="color">#39CCCC</item>
+    <item name="oliver" type="color">#3D9970</item>
+    <item name="lime" type="color">#01FF70</item>
+    <item name="yellow" type="color">#FFDC00</item>
+    <item name="navy" type="color">#001f3f</item>
+    <item name="chartreuse" type="color">#7FFF00</item>
+    <item name="chocolate" type="color">#D2691E</item>
+    <item name="coral" type="color">#FF7F50</item>
+    <item name="darkcyan" type="color">#008B8B</item>
+    <item name="deeppink" type="color">#FF1493</item>
+    <item name="hotpink" type="color">#FF69B4</item>
+    <item name="indianred" type="color">#EE6363</item>
+    <item name="plum" type="color">#FFBBFF</item>
+    <item name="lightPrimaryColor" type="color">#F8E2D8</item>
+
+    <!-- coolfie -->
+    <color name="background_black">#424144</color>
+
+    <!-- MORE -->
+    <color name="shade1">#ef2525</color>
+    <color name="shade2">#f04e23</color>
+    <color name="shade3">#f46c0f</color>
+    <color name="shade4">#f2874c</color>
+    <!--inbox-->
+    <color name="inbox">#fbfdda</color>
+</resources>

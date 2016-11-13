@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:background="#64FFFFFF"
+    android:gravity="top">
+
+    <ImageView
+        android:id="@+id/game_background"
+        android:layout_width="@dimen/item_height_large"
+        android:layout_height="@dimen/item_height_large"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_game"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/game_background"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/game_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_large"
+                android:text="title"/>
+
+            <TextView
+                android:id="@+id/game_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_normal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="description"
+                android:maxLines="2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right|center"
+                android:gravity="right|center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play"
+                    android:textColor="#ca2c27"
+                    android:textSize="@dimen/text_size_large"
+                    android:gravity="center"
+                    android:layout_marginRight="2dp"/>
+                
+                <ImageView
+                    android:layout_width="@dimen/item_height_small"
+                    android:layout_height="@dimen/item_height_small"
+                    android:src="@drawable/icon_playnow"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.3"-->
+            <!--android:gravity="center_vertical|center_horizontal"-->
+            <!--android:layout_gravity="center">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="@dimen/item_height"-->
+                <!--android:layout_height="@dimen/item_height"-->
+                <!--android:src="@drawable/next"/>-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+</RelativeLayout>

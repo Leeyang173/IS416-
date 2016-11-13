@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.AddGroupChatView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/information_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/empty_profile"
+                android:clickable="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+
+            <ImageView
+                android:id="@+id/camera_avatar_btn"
+                android:src="@drawable/camera"
+                android:background="@color/transparent"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_alignBottom="@+id/avatar_image"
+                android:layout_toRightOf="@+id/avatar_image"
+                android:layout_marginLeft="-15dp"
+                android:clickable="true" />
+
+            <EditText
+                android:id="@+id/title_txt"
+                android:hint="Enter group title..."
+                android:layout_toRightOf="@+id/camera_avatar_btn"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_normal"
+                android:inputType="textCapWords" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/middle_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/delete_btn"
+            android:layout_below="@+id/top_layout"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:gravity="center_vertical"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp">
+                <TextView
+                    android:id="@+id/member_lbl"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Members:" />
+                <com.searchView.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_toRightOf="@id/member_lbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <me.kaede.tagview.TagView
+                    android:id="@+id/tagview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    app:lineMargin="5dp"
+                    app:tagMargin="3dp"
+                    app:textPaddingBottom="3dp">
+                </me.kaede.tagview.TagView>
+
+            </ScrollView>
+
+            <View
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffdddddd" />
+
+            <ListView
+                android:id="@+id/friend_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#ffdddddd"
+                android:dividerHeight="0.5dp">
+            </ListView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Delete Group"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal"
+            />
+    </RelativeLayout>
+
+    <sg.edu.smu.livelabs.mobicom.views.MyCropImageView
+        android:id="@+id/my_crop_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></sg.edu.smu.livelabs.mobicom.views.MyCropImageView>
+</sg.edu.smu.livelabs.mobicom.views.AddGroupChatView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.ContactsView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/transparent">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:src="@drawable/places_ic_search"/>
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/search"
+                android:paddingLeft="40dp"
+                android:textSize="@dimen/text_size_normal"
+                android:singleLine="true"
+                />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+        <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/contact_list"
+            app:recyclerviewClipToPadding="true"
+            app:recyclerviewEmptyView="@layout/empty_view2">
+        </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/search_key_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ListView
+            android:id="@+id/search_filter_list"
+            android:layout_width="match_parent"
+            android:minHeight="50dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="7dp"
+            android:dividerHeight="1dp"
+            android:divider="@color/divider"
+            android:background="@drawable/round_rect_border">
+
+        </ListView>
+    </RelativeLayout>
+
+
+</sg.edu.smu.livelabs.mobicom.views.ContactsView>

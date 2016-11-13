@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.EVAPromotionView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/no_result_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:hint="@string/no_cmp"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/choose_tem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="#D3DADC"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/text_size_normal"
+        android:text="@string/choose_an_item_to_continues"
+        android:textColor="@color/colorPrimaryDark"/>
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:layout_above="@id/choose_tem">
+    </ListView>
+
+</sg.edu.smu.livelabs.mobicom.views.EVAPromotionView>

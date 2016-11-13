@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.ScavengerHuntDetailView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/team_member_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_large"
+                android:text="@string/team_members"
+                android:textColor="@color/white"
+                android:background="@color/dark_grey"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"/>
+
+            <sg.edu.smu.livelabs.mobicom.views.CustomGridView
+                android:id="@+id/team_member_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:layout_below="@+id/team_member_header"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_normal"
+                android:text="How to add a friend: Scan his/her QR code (located at the person name tag)"
+                android:textColor="@color/dark_grey"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:layout_below="@+id/team_member_grid"/>
+
+            <TextView
+                android:id="@+id/description_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_large"
+                android:text="@string/des"
+                android:textColor="@color/white"
+                android:background="@color/dark_grey"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:layout_below="@+id/hint"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/description_header">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/photo_hints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/before_starting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_hunt"
+                        android:background="@drawable/custom_button_grey"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"
+                        android:enabled="false"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/after_starting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/disband"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/disband"
+                        android:background="@drawable/custom_button"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/scan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/scan_qr_code"
+                        android:background="@drawable/custom_button"
+                        android:textColor="@color/white"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</sg.edu.smu.livelabs.mobicom.views.ScavengerHuntDetailView>

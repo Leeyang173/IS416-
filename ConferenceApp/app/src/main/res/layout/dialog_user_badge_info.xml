@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:maxHeight="400dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_background"
+        android:layout_alignBottom="@+id/content_layout"
+        android:layout_alignTop="@+id/content_layout"/>
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/close_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_close"
+            />
+        <RelativeLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close_btn"
+            android:layout_centerHorizontal="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/empty_profile" />
+
+            <TextView
+                android:id="@+id/name_short_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_super_super_large"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_below="@id/avatar_container">
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_super_large"
+                android:textColor="@color/colorPrimary"
+                />
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/colorPrimary"
+                android:maxLines="3"
+                />
+            <!--<ScrollView-->
+                <!--android:id="@+id/scrollView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp">-->
+                <!--<me.kaede.tagview.TagView-->
+                    <!--android:id="@+id/tagview"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:minHeight="100dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--app:lineMargin="5dp"-->
+                    <!--app:tagMargin="3dp"-->
+                    <!--app:textPaddingBottom="3dp"-->
+                    <!--app:textPaddingLeft="10dp"-->
+                    <!--app:textPaddingRight="10dp"-->
+                    <!--app:textPaddingTop="3dp"-->
+                    <!--android:layout_margin="10dp">-->
+                <!--</me.kaede.tagview.TagView>-->
+            <!--</ScrollView>-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/info_layout">
+
+            <Button
+                android:id="@+id/add_to_phone_btn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/icon_new"
+                android:background="@drawable/round_rect"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/btn_text_color2"
+                android:text="Add to contacts"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:id="@+id/message_btn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/icon_message"
+                android:background="@drawable/round_rect"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/btn_text_color2"
+                android:text="Message"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/achinevement_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/title_background_color"
+        android:layout_below="@id/content_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Achievements/Badges"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/badges_list"
+        android:layout_below="@id/achinevement_bar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_below="@id/achinevement_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textSize="@dimen/text_size_large"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

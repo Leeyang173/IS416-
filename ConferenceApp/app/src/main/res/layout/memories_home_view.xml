@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.MemoriesHomeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_black">
+
+    <RelativeLayout
+        android:id="@+id/upload_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/camera_btn"
+                android:layout_width="@dimen/icon_size_large"
+                android:layout_height="@dimen/icon_size_large"
+                android:background="@drawable/icon_camera"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_normal"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@id/camera_btn"
+                android:text="Upload Photo"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_grey"
+        android:layout_below="@+id/upload_layout"/>
+
+    <TextView
+        android:id="@+id/date_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_super_large"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_below="@+id/divider2"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_grey"
+        android:layout_below="@+id/date_title"/>
+
+    <TextView
+        android:id="@+id/no_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textColor="@color/background_black"
+        android:layout_below="@+id/divider"
+        android:hint="@string/memories_no_photos"
+        android:textSize="@dimen/text_size_large"
+        />
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider"
+        android:id="@+id/image_list"
+        app:recyclerviewClipToPadding="true">
+    </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
+
+
+</sg.edu.smu.livelabs.mobicom.views.MemoriesHomeView>

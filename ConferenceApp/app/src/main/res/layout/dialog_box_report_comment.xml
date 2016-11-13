@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rect_shape"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Report"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_super_large"/>
+
+        <EditText
+            android:id="@+id/report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:focusableInTouchMode="false"
+            android:layout_below="@+id/avatar_image"
+            android:background="@drawable/custom_edittext"
+            android:gravity="center"
+            android:hint="Select reason"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/closeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:text="Cancel"
+                android:gravity="center"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/reportBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:text="Report"
+                android:gravity="center"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

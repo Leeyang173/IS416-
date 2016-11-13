@@ -1,0 +1,144 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath 'com.google.gms:google-services:2.0.0-alpha6'
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "http://dl.bintray.com/jjhesk/maven" }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "sg.edu.smu.livelabs.mobicom"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 27
+        versionName "1.3.16"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+
+        disable 'InvalidPackage'
+    }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = [] //disable automatic ndk-build call
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    apt 'com.github.lukaspili.automortar:automortar-compiler:1.1'
+    apt 'com.github.lukaspili.autodagger2:autodagger2-compiler:1.1'
+    apt 'com.google.dagger:dagger-compiler:2.0.1'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+//    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.github.lukaspili.automortar:automortar:1.1'
+    compile 'com.github.lukaspili.autodagger2:autodagger2:1.1'
+    compile 'com.squareup.mortar:mortar:0.19'
+    compile 'com.squareup.flow:flow:0.10'
+    compile 'com.squareup.flow:flow-path:0.10'
+    compile 'com.google.dagger:dagger:2.0.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //network
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.okhttp:logging-interceptor:2.6.0'
+    compile 'com.squareup:otto:1.3.8'
+    // for autorest: network social plus
+    compile 'com.fasterxml.jackson.core:jackson-core:2.6.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.2'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.0.4'
+    compile 'joda-time:joda-time:2.3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.1.2'
+//    compile group: 'com.google.guava', name: 'guava', version: '15.0'
+    compile 'com.microsoft.rest:client-runtime:1.0.0-beta1'
+
+    //Database
+    compile 'de.greenrobot:greendao:2.0.0'
+    //GCM
+    compile 'com.google.android.gms:play-services:8.4.0'
+    //dialog
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.3@aar') {
+        transitive = true
+    }
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.2.6@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //others
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'me.grantland:autofittextview:0.2.+'
+    compile 'com.hkm.slidingmenulib:libmenu:0.4.9'
+    compile 'com.isseiaoki:simplecropview:1.1.4'
+    compile 'org.bluecabin.textoo:textoo:1.0.1'
+    //test
+    testCompile 'junit:junit:4.12'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.7@aar') {
+        transitive = true;
+    }
+    compile 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'org.altbeacon:android-beacon-library:2.7.1'
+    compile 'me.itangqi.waveloadingview:library:0.2.0'
+    compile project(':tagview')
+    compile project(':SocialPlus_Autorest_debug')
+}
+
+apply plugin: 'com.google.gms.google-services'

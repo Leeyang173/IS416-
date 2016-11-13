@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "723061349432",
+    "firebase_url": "https://mobicom2016-1ffd1.firebaseio.com",
+    "project_id": "mobicom2016-1ffd1",
+    "storage_bucket": "mobicom2016-1ffd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723061349432:android:dca87e8310aabfc3",
+        "android_client_info": {
+          "package_name": "sg.edu.smu.livelabs.mobicom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723061349432-obmu98p2q9f4pav6dmvc6081bfg3m4ig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkdVyk76WGereJH9IWb1cAWMkZ218yMzY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

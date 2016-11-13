@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:id="@+id/background_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:clickable="false"/>
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_large"
+                android:text="10:00AM"
+                android:gravity="center"
+                android:maxLines="2"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"/>
+            <RelativeLayout
+                android:layout_toRightOf="@id/time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:clickable="false">
+                <TextView
+                    android:id="@+id/room_no_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/colorPrimary"
+                    android:clickable="false"
+                    android:text="room 300"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_below="@id/room_no_tv"
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/text_color"
+                    android:clickable="false"
+                    android:text="Session1"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:maxLength="40"
+                    />
+                <TextView
+                    android:id="@+id/description_tv"
+                    android:layout_below="@id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/gray"
+                    android:clickable="false"
+                    android:text="Building Sensors for sensing"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

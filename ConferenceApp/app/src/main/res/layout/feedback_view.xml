@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.FeedbackView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffffe"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/type_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:focusableInTouchMode="false"
+        android:hint="@string/select_feedback_type"
+        android:inputType="none"
+        android:maxLines="1"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/content_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="@string/your_feedback_"
+        android:singleLine="false"
+        android:inputType="textCapSentences|textMultiLine"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" />
+
+
+</sg.edu.smu.livelabs.mobicom.views.FeedbackView>

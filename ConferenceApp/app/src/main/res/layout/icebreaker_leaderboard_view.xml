@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.IceBreakerLeaderBoardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_grey"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top 3"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <sg.edu.smu.livelabs.mobicom.views.CustomGridView
+            android:id="@+id/leaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:verticalSpacing="15dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/no_leaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No leaders at the moment"
+            android:textSize="@dimen/text_size_super_large"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:gravity="center"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_grey"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/your_friends_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Friends"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/your_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"/>
+
+        <TextView
+            android:id="@+id/no_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start playing The Talent Firm now to add new friends!"
+            android:textSize="@dimen/text_size_super_large"
+            android:visibility="gone"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</sg.edu.smu.livelabs.mobicom.views.IceBreakerLeaderBoardView>

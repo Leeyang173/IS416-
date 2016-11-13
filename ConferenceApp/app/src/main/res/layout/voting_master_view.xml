@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.VotingView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/key_note_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="top|center_horizontal">
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_super_super_large"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/error_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_size_super_large"/>
+
+                <Chronometer android:id="@+id/chronometer"
+                    android:visibility="gone"
+                    android:format="@string/chronometer_initial_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingBottom="30dip"
+                    android:paddingTop="30dip"
+                    android:textSize="@dimen/text_size_super_super_large"/>
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textSize="@dimen/text_size_super_large"/>
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"
+                    android:hint="Enter the title here"
+                    android:maxLines="1"/>
+
+                <LinearLayout
+                    android:id="@+id/questionGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/logical_selection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Y/N"
+                        android:textSize="@dimen/text_size_super_large"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/custom_circle_button_emerald"/>
+
+                    <Button
+                        android:id="@+id/multiple_selection"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="MCQ"
+                        android:textSize="@dimen/text_size_super_large"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/custom_circle_button_pomegranate"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CREATE VOTING"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center_horizontal|center_vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <TextView
+                        android:id="@+id/title_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_super_super_large"
+                        android:paddingTop="30dp"/>
+
+                    <TextView
+                        android:id="@+id/message_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_super_large"
+                        android:paddingBottom="15dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/radio_group_user_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"/>
+
+                    <LinearLayout
+                        android:id="@+id/radio_group_user_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"/>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/no_internet_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_internet_connection"
+                android:textSize="@dimen/text_size_large"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</sg.edu.smu.livelabs.mobicom.views.VotingView>

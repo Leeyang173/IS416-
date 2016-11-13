@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:contentInsetStart="0dp"
+    android:contentInsetLeft="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    >
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true">
+            <TextView
+                android:clickable="true"
+                android:layout_marginLeft="7dp"
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="21sp"
+                android:maxLength="20"
+                android:text="@string/app_title_cap"/>
+            <LinearLayout
+                android:id="@+id/center_control"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <Button
+                    android:id="@+id/left_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:textColor="@color/title_tab_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:text="right"
+                    android:background="@drawable/left_round_rect"/>
+                <Button
+                    android:id="@+id/middle_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:textColor="@color/title_tab_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:text="middle"
+                    android:background="@drawable/rect"/>
+                <Button
+                    android:id="@+id/right_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:textColor="@color/title_tab_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:text="left"
+                    android:background="@drawable/right_round_rect"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            >
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back_icon"
+                android:scaleType="fitXY"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/back_btn"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_container"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_centerInParent="true"
+                android:id="@+id/menu_icon_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="7dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"/>
+
+            <Button
+                android:id="@+id/menu_txt_btn"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:text="DONE"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="5dp"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

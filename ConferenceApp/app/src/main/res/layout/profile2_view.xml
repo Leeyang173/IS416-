@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.Profile2View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/done_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_super_large"
+            android:text="@string/done"
+            android:background="@drawable/btn_background_color_secondary"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_above="@id/done_btn">
+            <TextView
+                android:id="@+id/register_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registration (Step 2)"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_super_large"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/select_txt"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:gravity="left"
+                android:textSize="@dimen/text_size_normal"
+                android:text="Select those that best describes your interests:"/>
+            <ListView
+                android:id="@+id/listview"
+                android:fadeScrollbars="false"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@color/transparent"
+                android:dividerHeight="10dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <sg.edu.smu.livelabs.mobicom.views.InstructionView
+        android:id="@+id/instruction_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </sg.edu.smu.livelabs.mobicom.views.InstructionView>
+</sg.edu.smu.livelabs.mobicom.views.Profile2View>

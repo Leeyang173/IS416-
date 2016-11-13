@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.ScavengerHuntView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:id="@+id/scroll_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_normal"
+                android:paddingTop="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:gravity="left"/>
+
+
+            <sg.edu.smu.livelabs.mobicom.views.CustomListView
+                android:id="@+id/scavenger_hunt_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/grey"
+                android:dividerHeight="1dp"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</sg.edu.smu.livelabs.mobicom.views.ScavengerHuntView>

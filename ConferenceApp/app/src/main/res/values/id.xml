@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="questionTV" />
+    <item type="id" name="selection1" />
+    <item type="id" name="selection2" />
+    <item type="id" name="selection3" />
+    <item type="id" name="selection4" />
+    <item type="id" name="selection5" />
+    <item type="id" name="selection6" />
+</resources>

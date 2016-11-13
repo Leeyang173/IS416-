@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.GamesView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/no_result_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/no_internet_connection"
+            android:textSize="@dimen/text_size_super_large"
+            android:textColor="@color/dark_grey"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/list"/>
+
+        <sg.edu.smu.livelabs.mobicom.views.InstructionView
+            android:id="@+id/instruction_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </sg.edu.smu.livelabs.mobicom.views.InstructionView>
+
+    </RelativeLayout>
+
+
+
+</sg.edu.smu.livelabs.mobicom.views.GamesView>

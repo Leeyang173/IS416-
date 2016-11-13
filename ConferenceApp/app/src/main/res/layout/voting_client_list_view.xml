@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.VotingListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <ListView
+        android:id="@+id/polling_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/no_internet_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/internet_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet_connection"
+            android:textSize="@dimen/text_size_large"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/empty_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_poll"
+            android:textSize="@dimen/text_size_large"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"/>
+
+    </RelativeLayout>
+
+
+</sg.edu.smu.livelabs.mobicom.views.VotingListView>

@@ -1,0 +1,1 @@
+include ':app', ':tagview', ':SocialPlus_Autorest_debug'

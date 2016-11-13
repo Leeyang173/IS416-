@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:background="@drawable/round_rect_shape">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|fill"
+        android:gravity="bottom|center_horizontal">
+
+        <ImageView
+            android:id="@+id/star_one"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/star"/>
+
+        <ImageView
+            android:id="@+id/star_two"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/star"/>
+
+        <ImageView
+            android:id="@+id/star_three"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/star"/>
+
+        <ImageView
+            android:id="@+id/trophy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/trophy_white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_super_large"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_grey"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="fill"
+        android:baselineAligned="false"
+        android:textSize="@dimen/text_size_normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Close"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/playBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Play Now"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

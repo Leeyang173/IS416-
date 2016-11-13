@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#4e505b">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:maxHeight="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_background"
+            android:layout_alignBottom="@+id/container"
+            android:layout_alignTop="@+id/container"/>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="35dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/avatar_image"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/icon_no_profile"/>
+
+                <TextView
+                    android:id="@+id/name_short_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_super_super_large"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Name: "
+                        android:textSize="@dimen/text_size_large"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="User Name"
+                        android:textSize="@dimen/text_size_large"
+                        android:gravity="left"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="left"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Badges: "
+                        android:textSize="@dimen/text_size_large"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:id="@+id/points"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_large"
+                        android:text="0"
+                        android:gravity="left"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="left"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Your Rank: "
+                        android:textSize="@dimen/text_size_large"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:id="@+id/ranking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="0"
+                        android:textSize="@dimen/text_size_large"
+                        android:gravity="left"/>
+
+                    <Button
+                        android:id="@+id/more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_small"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Leaderboard"
+                        android:background="@drawable/custom_button_white"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="6dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/earn_more_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="See prizes"
+            android:layout_alignBottom="@+id/container"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Games"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/text_size_large"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingBottom="5dp"/>
+
+</LinearLayout>
