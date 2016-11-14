@@ -183,6 +183,8 @@ public class MainActivity extends AppCompatActivity implements Flow.Dispatcher, 
 
     @Bind(R.id.more_btn)
     public Button moreBtn;
+
+
     private SplashScreen splashScreen;
     private TextToSpeech speaker;
 

@@ -29,7 +29,8 @@
         android:layout_centerHorizontal="true"
         android:layout_width="250dp"
         android:entries="@array/location_arrays"
-        android:prompt="@string/location_prompt" />
+        android:prompt="@string/location_prompt"
+        android:textAlignment="center"/>
 
     <Button
         android:text="Toggle AR"

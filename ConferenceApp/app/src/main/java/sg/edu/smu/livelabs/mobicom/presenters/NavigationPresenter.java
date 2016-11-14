@@ -1,22 +1,12 @@
 package sg.edu.smu.livelabs.mobicom.presenters;
 
-import android.annotation.TargetApi;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.AdapterView;
 
 import autodagger.AutoComponent;
 import automortar.AutoScreen;
+import flow.Flow;
 import mortar.ViewPresenter;
 import sg.edu.smu.livelabs.mobicom.ActionBarOwner;
 import sg.edu.smu.livelabs.mobicom.AppDependencies;
@@ -25,6 +15,8 @@ import sg.edu.smu.livelabs.mobicom.MainActivity;
 import sg.edu.smu.livelabs.mobicom.R;
 import sg.edu.smu.livelabs.mobicom.flow.Layout;
 import sg.edu.smu.livelabs.mobicom.net.RestClient;
+import sg.edu.smu.livelabs.mobicom.presenters.screen.ARNavigationScreen;
+import sg.edu.smu.livelabs.mobicom.presenters.screen.AboutUsScreen;
 import sg.edu.smu.livelabs.mobicom.views.NavigationView;
 
 /**
@@ -50,26 +42,34 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
     protected void onLoad(Bundle savedInstanceState) {
         super.onLoad(savedInstanceState);
         mainActivity.currentTab = MainActivity.OTHER_TAB;
+        mainActivity.setVisibleBottombar(View.VISIBLE);
         actionBarOwner.setConfig(new ActionBarOwner.Config(true, "Navigation", null));
         getView().messageTV.setText("Where are you headed?");
         getView().arButton.setText("Toggle AR");
-        //getView().locDDL.setText("THIS IS A TEST");
+        getView().locDDL.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-       /* try {
-            ConnectivityManager cm = (ConnectivityManager) getView().getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-            getView().progressBar.setVisibility(View.GONE);
-            if(cm.getActiveNetworkInfo() == null) {
-                getView().webView.setVisibility(View.GONE);
-                getView().progressBar.setVisibility(View.GONE);
-                getView().messageTV.setVisibility(View.VISIBLE);
-                getView().messageTV.setText("Unable to load web page");
-                return;
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int position, long id) {
+
+            String location = getView().locDDL.getSelectedItem().toString();
+            System.out.println(location);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+            // TODO Auto-generated method stub
+
+        }
+        });
+
+        getView().arButton.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Flow.get(getView().getContext()).set(new ARNavigationScreen());
             }
-
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }*/
+        });
     }
 }

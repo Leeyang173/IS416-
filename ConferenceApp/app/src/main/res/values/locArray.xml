@@ -4,14 +4,14 @@
     <string name="location_prompt">Choose a Location</string>
 
     <string-array name="location_arrays">
-        <item>Malaysia</item>
-        <item>United States</item>
-        <item>Indonesia</item>
-        <item>France</item>
-        <item>Italy</item>
-        <item>Singapore</item>
-        <item>New Zealand</item>
-        <item>India</item>
+        <item>SMU Labs Level 1 Flexible Study Area</item>
+        <item>SMU Labs Level 1 Atrium</item>
+        <item>SMU Labs Level 2 Study Area</item>
+        <item>SMU Labs Level 2 Office</item>
+        <item>SMU Labs Level 3 Pantry Area</item>
+        <item>SMU Labs Level 3 Booth Area</item>
+        <item>SMU Labs Level 3 Sleeping Room</item>
+        <item>SMU Labs Level 3 Toilet</item>
     </string-array>
 
 </resources>
