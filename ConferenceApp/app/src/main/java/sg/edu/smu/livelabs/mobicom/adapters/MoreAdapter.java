@@ -35,6 +35,7 @@ import sg.edu.smu.livelabs.mobicom.presenters.screen.ForumScreen;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.InboxScreen;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.LeaderboardMainScreen;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.MemoriesMainScreen;
+import sg.edu.smu.livelabs.mobicom.presenters.screen.NavigationScreen;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.OrganizersScreen;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.PrizesScreen;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.ProfileScreen;
@@ -95,10 +96,10 @@ public class MoreAdapter extends BaseAdapter {
         this.items.add(new Item("Committee", ORGANISERS, R.drawable.icon_organisers_white, ContextCompat.getColor(context, R.color.colorPrimary)));
         this.items.add(new Item("Feedback", FEEDBACK, R.drawable.icon_feedback, ContextCompat.getColor(context, R.color.colorPrimary)));
         this.items.add(new Item("With Thanks", SPONSOR, R.drawable.icon_sponsors_white, ContextCompat.getColor(context, R.color.colorPrimary)));
-//        this.items.add(new Item("Your SG", YOUR_SG, R.drawable.icon_sg, ContextCompat.getColor(context, R.color.colorPrimary)));
+//        this.items.add(new Item("Your SG", YOUR_SG, R.drawable.icon_sg, ContextCompat.getColorRR(context, R.color.colorPrimary)));
         this.items.add(new Item("About Us", ABOUT_US, R.drawable.icon_aboutus, ContextCompat.getColor(context, R.color.colorPrimary)));
         this.items.add(new Item("Games", GAMES, R.drawable.icon_game, ContextCompat.getColor(context, R.color.colorPrimary)));
-        this.items.add(new Item("Navigation", GAMES, R.drawable.icon_navi, ContextCompat.getColor(context, R.color.colorPrimary)));
+        this.items.add(new Item("Navigation", NAVIGATION, R.drawable.icon_navi, ContextCompat.getColor(context, R.color.colorPrimary)));
 //        this.items.add(new Item("Awards", AWARDS, R.drawable.icon_award, ContextCompat.getColor(context, R.color.colorPrimary)));
         Collections.sort(items, new Comparator<Item>() {
             @Override
@@ -249,6 +250,9 @@ public class MoreAdapter extends BaseAdapter {
                     break;
                 case ABOUT_US:
                     Flow.get(context).set(new AboutUsScreen());
+                    break;
+                case NAVIGATION:
+                    Flow.get(context).set(new NavigationScreen());
                     break;
 //                case AWARDS:
 //                    Flow.get(context).set(new AwardsScreen());

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.edu.smu.livelabs.mobicom.views.NavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:background="@drawable/app_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/locationSpinner" />
+
+    <Spinner
+        android:id="@+id/locationSpinner"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/gradient_spinner"
+        android:layout_height="80px"
+        android:layout_below="@+id/message"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:entries="@array/location_arrays"
+        android:prompt="@string/location_prompt" />
+
+    <Button
+        android:text="Toggle AR"
+        android:layout_width="wrap_content"
+        android:id="@+id/arButton"
+        android:textSize="8dp"
+        android:background="@drawable/custom_button_white"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_large"
+        android:gravity="center_horizontal"
+        android:visibility="visible"
+        android:textAlignment="center"
+        android:text="Where are you headed?"
+        android:layout_alignBottom="@+id/arButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</sg.edu.smu.livelabs.mobicom.views.NavigationView>
