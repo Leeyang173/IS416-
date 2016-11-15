@@ -1,5 +1,11 @@
 package sg.edu.smu.livelabs.mobicom.presenters;
 
+import android.annotation.TargetApi;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.os.Build;
 import android.os.StrictMode;
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -9,6 +15,8 @@ import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -47,6 +55,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
@@ -60,17 +69,18 @@ import java.util.List;
 )
 @DaggerScope(NavigationPresenter.class)
 @Layout(R.layout.navi_view)
-public class NavigationPresenter extends ViewPresenter<NavigationView> {
-    private MainActivity mainActivity;
+public  class NavigationPresenter extends ViewPresenter<NavigationView> {
+    private static MainActivity mainActivity;
     private ActionBarOwner actionBarOwner;
     private String url = RestClient.LOC_MAC_URL;
     private boolean error = false;
-    private String destID = "1010200075";
+    private static String destID = "1010200075";
 
     public NavigationPresenter(MainActivity mainActivity, ActionBarOwner actionBarOwner){
         this.mainActivity = mainActivity;
         this.actionBarOwner = actionBarOwner;
     }
+
     @Override
     protected void onLoad(Bundle savedInstanceState) {
         super.onLoad(savedInstanceState);
@@ -79,14 +89,24 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
         actionBarOwner.setConfig(new ActionBarOwner.Config(true, "Navigation", null));
         getView().messageTV.setText("Where are you headed?");
         getView().arButton.setText("Toggle AR");
+        getView().map.setImageResource(R.drawable.sisl3);
+        /*try {
+            String currLoc = getLocation();
+            if (currLoc.charAt(5) == '2'){
+                getView().map.setImageResource(R.drawable.sisl2);
+            } else {
+                getView().map.setImageResource(R.drawable.sisl3);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
         getView().locDDL.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
         @Override
         public void onItemSelected(AdapterView<?> parent, View view,
                                    int position, long id) {
 
-            String location = getView().locDDL.getSelectedItem().toString();
-            System.out.println(location);
             int locID = getView().locDDL.getSelectedItemPosition();
             switch (locID){
                 case 0:
@@ -167,6 +187,11 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
                 default:
                     break;
             }
+            try {
+                test();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
@@ -181,19 +206,18 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                //Flow.get(getView().getContext()).set(new ARNavigationScreen());
+               // Flow.get(getView().getContext()).set(new ARNavigationScreen());
                 try {
                     test();
-
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         });
     }
-
-    public void test() throws IOException {
-
+    private static int width = 0;
+    public static ArrayList<int[]> test() throws IOException {
+        ArrayList<String> items = new ArrayList<String>();
         Context context = mainActivity.getContext();
 
         EdgeGenerator eg = new EdgeGenerator(new InputStreamReader(context.getAssets().open("sislevel2.csv")));
@@ -203,8 +227,10 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
         EdgeGenerator eg2 = new EdgeGenerator(new InputStreamReader(context.getAssets().open("sislevel3.csv")));
         Edge[] level3 = eg2.generateEdges();
         HashMap<Integer, Integer> level3Map = eg2.getIdMap();
-
-        String from = getLocation();
+        width = eg2.getWidth();
+        //String from = getLocation();
+        String from = "1010300101";
+        //String to = "1010300157";
         String to = destID;
         int fromLevel = Integer.parseInt(from.substring(3, 5));
         int fromLandmark = Integer.parseInt(from.substring(6, 10));
@@ -212,7 +238,7 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
         int toLandmark = Integer.parseInt(to.substring(6, 10));
 
 
-        //THIS CODES ARE FOR SMU LABS
+        //THESE CODES ARE FOR SMU LABS
 
         /*if (fromLevel == 1 && toLevel == 2) {
             Graph level1Graph = new Graph(level1, level1Map.get(fromLandmark), level1Map.get(51));
@@ -240,36 +266,54 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
             System.out.println(level2Graph.toString());
         }
         */
-
+        ArrayList<int[]> result = new ArrayList<>();
         ///
         if (fromLevel == 3 && toLevel == 2) {
             Graph level3Graph = new Graph(level3, level3Map.get(fromLandmark), level3Map.get(44));
             level3Graph.calculateShortestDistances();
             System.out.println(level3Graph.toString());
+            String[] output = level3Graph.toString().split(",");
+            int[] array = new int[output.length];
+            for(int i = 0; i < output.length;i++){
+                array[i] = Integer.parseInt(output[i]);
+            }
+            result.add(array);
+            //items = Arrays.asList(level3Graph.toString().split("\\s*,\\s*"));
 
             Graph level2Graph = new Graph(level2, level2Map.get(32), level2Map.get(toLandmark));
             level2Graph.calculateShortestDistances();
             System.out.println(level2Graph.toString());
+            //items = Arrays.asList(level2Graph.toString().split("\\s*,\\s*"));
         } else if (fromLevel == 2 && toLevel == 3) {
             Graph level2Graph = new Graph(level2, level2Map.get(fromLandmark), level2Map.get(32));
             level2Graph.calculateShortestDistances();
             System.out.println(level2Graph.toString());
+            //items = Arrays.asList(level2Graph.toString().split("\\s*,\\s*"));
 
             Graph level3Graph = new Graph(level3, level3Map.get(44), level3Map.get(toLandmark));
             level3Graph.calculateShortestDistances();
             System.out.println(level3Graph.toString());
+
         } else if (fromLevel == 3) {
             Graph level3Graph = new Graph(level3, level3Map.get(fromLandmark), level3Map.get(toLandmark));
             level3Graph.calculateShortestDistances();
             System.out.println(level3Graph.toString());
+            String[] output = level3Graph.toString().split(",");
+            int[] array = new int[output.length];
+            for(int i = 0; i < output.length;i++){
+                array[i] = Integer.parseInt(output[i]);
+            }
+            result.add(array);
         } else {
             Graph level2Graph = new Graph(level2, level2Map.get(fromLandmark), level2Map.get(toLandmark));
             level2Graph.calculateShortestDistances();
             System.out.println(level2Graph.toString());
+            //items = Arrays.asList(level2Graph.toString().split("\\s*,\\s*"));
         }
+        return result;
     }
 
-    public String getMac() throws IOException {
+    public static String getMac() throws IOException {
         String toRet = "";
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
@@ -283,7 +327,6 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
             httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
             HttpResponse response = httpClient.execute(httpPost);
             // write response to log
-            Log.d("Http Post Response:", response.toString());
             HttpEntity entity = response.getEntity();
             is = entity.getContent();
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
@@ -308,7 +351,7 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
         return  toRet;
     }
 
-    public String getLocation() throws IOException {
+    public static String getLocation() throws IOException {
         String toRet = "";
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
@@ -322,7 +365,6 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
             httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
             HttpResponse response = httpClient.execute(httpPost);
             // write response to log
-            Log.d("Http Post Response:", response.toString());
             HttpEntity entity = response.getEntity();
             is = entity.getContent();
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
@@ -349,10 +391,14 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
         return toRet;
     }
 
-    public String getLocalIpAddress(){
+    public static String getLocalIpAddress(){
         Context context = mainActivity.getContext();
         WifiManager wifiManager = (WifiManager) context.getSystemService(context.WIFI_SERVICE);
         String ipAddress = Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress());
         return ipAddress;
+    }
+
+    public static int getWidth(){
+        return width;
     }
 }

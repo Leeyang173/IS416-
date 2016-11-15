@@ -119,4 +119,8 @@ public class EdgeGenerator {
     public boolean inWidth(int index) {
         return index >= 0 && index < width;
     }
+
+    public int getWidth(){
+        return width;
+    }
 }
