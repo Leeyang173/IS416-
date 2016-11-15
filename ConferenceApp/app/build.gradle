@@ -25,7 +25,7 @@ apply plugin: 'io.fabric'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
-
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "sg.edu.smu.livelabs.mobicom"
         minSdkVersion 16

@@ -65,11 +65,14 @@ import sg.edu.smu.livelabs.mobicom.net.api.TrackingApi;
 public class RestClient {
     public static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     public static final String BASE_URL = "https://apollo.smu.edu.sg/mobicom_sandbox/";//"https://mobicom16.winlab.rutgers.edu/mobicom_sandbox/";//DEV
+    public static final String TEST_URL = "https://athena.smu.edu.sg/hestia/analytics_sandbox/";//"https://mobicom16.winlab.rutgers.edu/mobicom_sandbox/";//DEV
 //    public static final String BASE_URL = "https://mobicom16.winlab.rutgers.edu/mobicom/";//PRODUCT
 
     public static final String PHOTO_BASE_URL = BASE_URL + "backend/mobicom/assets/";
     public static final String API_BASE_URL = BASE_URL + "backend/mobicom/index.php/";
     public static final String BEP_API_BASE_URL = BASE_URL + "bep/intervention_engine/index.php/";
+    public static final String LOC_MAC_URL = TEST_URL + "/smulabs/index.php/Point_location/getUserLocationByMAC";
+    public static final String LOC_IP_URL = TEST_URL + "/smulabs/index.php/get_mac_from_ip";
 
     public static final String WEBVIEW_BASE_URL = BASE_URL + "portal/confwebapp/index.php/";
     public static final String LEADERBOARD_BASE_URL = BASE_URL + "portal/confwebapp/index.php/leaderboard?user_id=";
@@ -83,6 +86,7 @@ public class RestClient {
     public static final String APP_KEY = "28a233a9-e11d-4496-a8f5-7437d196a4c2";//Dev
 
     public static final String KEY = "35uyh4gy89h34g98t7gh349875ygh45g638gybiu643h53t45gt";
+
 
     private ChatApi chatApi;
     private AgendaApi agendaApi;

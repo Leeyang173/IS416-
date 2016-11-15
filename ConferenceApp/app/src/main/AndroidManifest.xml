@@ -10,6 +10,7 @@
     <uses-permission android:name="sg.edu.smu.livelabs.mobicom.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <permission
         android:name="sg.edu.smu.livelabs.mobicom.permission.C2D_MESSAGE"
