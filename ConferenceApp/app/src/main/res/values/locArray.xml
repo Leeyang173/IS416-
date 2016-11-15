@@ -4,14 +4,31 @@
     <string name="location_prompt">Choose a Location</string>
 
     <string-array name="location_arrays">
-        <item>SMU Labs Level 1 Flexible Study Area</item>
-        <item>SMU Labs Level 1 Atrium</item>
-        <item>SMU Labs Level 2 Study Area</item>
-        <item>SMU Labs Level 2 Office</item>
-        <item>SMU Labs Level 3 Pantry Area</item>
-        <item>SMU Labs Level 3 Booth Area</item>
-        <item>SMU Labs Level 3 Sleeping Room</item>
-        <item>SMU Labs Level 3 Toilet</item>
+        <item>SMU SIS L2 SR 2 - 1</item>
+        <item>SMU SIS L2 SR 2 - 2</item>
+        <item>SMU SIS L2 SR 2 - 3</item>
+        <item>SMU SIS L2 SR 2 - 4</item>
+        <item>SMU SIS L2 GSR 2 - 1</item>
+        <item>SMU SIS L2 GSR 2 - 2</item>
+        <item>SMU SIS L2 GSR 2 - 3</item>
+        <item>SMU SIS L2 GSR 2 - 4</item>
+        <item>SMU SIS L2 GSR 2 - 5</item>
+        <item>SMU SIS L2 GSR 2 - 6</item>
+        <item>SMU SIS L2 GSR 2 - 7</item>
+        <item>SMU SIS LiveLabs</item>
+        <item>SMU SIS L3 SR 3 - 1</item>
+        <item>SMU SIS L3 SR 3 - 2</item>
+        <item>SMU SIS L3 SR 3 - 3</item>
+        <item>SMU SIS L3 SR 3 - 4</item>
+        <item>SMU SIS L3 GSR 3 - 1</item>
+        <item>SMU SIS L3 GSR 3 - 2</item>
+        <item>SMU SIS L3 GSR 3 - 3</item>
+        <item>SMU SIS L3 GSR 3 - 4</item>
+        <item>SMU SIS L3 GSR 3 - 5</item>
+        <item>SMU SIS L3 GSR 3 - 6</item>
+        <item>SMU SIS L3 CR 3 - 1</item>
+        <item>SMU SIS L3 CR 3 - 2</item>
+        <item>SMU SIS Research Labs</item>
     </string-array>
 
 </resources>

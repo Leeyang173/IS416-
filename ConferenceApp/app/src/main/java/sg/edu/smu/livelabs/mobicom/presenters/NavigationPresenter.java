@@ -65,6 +65,7 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
     private ActionBarOwner actionBarOwner;
     private String url = RestClient.LOC_MAC_URL;
     private boolean error = false;
+    private String destID = "1010200075";
 
     public NavigationPresenter(MainActivity mainActivity, ActionBarOwner actionBarOwner){
         this.mainActivity = mainActivity;
@@ -86,6 +87,86 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
 
             String location = getView().locDDL.getSelectedItem().toString();
             System.out.println(location);
+            int locID = getView().locDDL.getSelectedItemPosition();
+            switch (locID){
+                case 0:
+                    destID = "1010200125";
+                    break;
+                case 1:
+                    destID = "1010200100";
+                    break;
+                case 2:
+                    destID = "1010200089";
+                    break;
+                case 3:
+                    destID = "1010200068";
+                    break;
+                case 4:
+                    destID = "1010200140";
+                    break;
+                case 5:
+                    destID = "1010200138";
+                    break;
+                case 6:
+                    destID = "1010200130";
+                    break;
+                case 7:
+                    destID = "1010200126";
+                    break;
+                case 8:
+                    destID = "1010200087";
+                    break;
+                case 9:
+                    destID = "1010200085";
+                    break;
+                case 10:
+                    destID = "1010200083";
+                    break;
+                case 11:
+                    destID = "1010200010";
+                    break;
+                case 12:
+                    destID = "1010300123";
+                    break;
+                case 13:
+                    destID = "1010300114";
+                    break;
+                case 14:
+                    destID = "1010300101";
+                    break;
+                case 15:
+                    destID = "1010300074";
+                    break;
+                case 16:
+                    destID = "1010300151";
+                    break;
+                case 17:
+                    destID = "1010300138";
+                    break;
+                case 18:
+                    destID = "1010300140";
+                    break;
+                case 19:
+                    destID = "1010300146";
+                    break;
+                case 20:
+                    destID = "1010300070";
+                    break;
+                case 21:
+                    destID = "1010300072";
+                    break;
+                case 22:
+                    destID = "1010300095";
+                    break;
+                case 23:
+                    destID = "1010300091";
+                    break;
+                case 24:
+                    destID = "1010300157";
+                    break;
+                default:
+                    break;
+            }
         }
 
         @Override
@@ -124,11 +205,14 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
         HashMap<Integer, Integer> level3Map = eg2.getIdMap();
 
         String from = getLocation();
-        String to = "1010200075";
+        String to = destID;
         int fromLevel = Integer.parseInt(from.substring(3, 5));
         int fromLandmark = Integer.parseInt(from.substring(6, 10));
         int toLevel = Integer.parseInt(to.substring(3, 5));
         int toLandmark = Integer.parseInt(to.substring(6, 10));
+
+
+        //THIS CODES ARE FOR SMU LABS
 
         /*if (fromLevel == 1 && toLevel == 2) {
             Graph level1Graph = new Graph(level1, level1Map.get(fromLandmark), level1Map.get(51));
@@ -156,6 +240,8 @@ public class NavigationPresenter extends ViewPresenter<NavigationView> {
             System.out.println(level2Graph.toString());
         }
         */
+
+        ///
         if (fromLevel == 3 && toLevel == 2) {
             Graph level3Graph = new Graph(level3, level3Map.get(fromLandmark), level3Map.get(44));
             level3Graph.calculateShortestDistances();
