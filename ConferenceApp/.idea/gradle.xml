@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/SocialPlus_Autorest_debug" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/artoolkit" />
+            <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/tagview" />
           </set>
         </option>
