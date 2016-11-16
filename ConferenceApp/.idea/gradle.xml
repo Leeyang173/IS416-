@@ -9,9 +9,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ARToolKitSimple" />
+            <option value="$PROJECT_DIR$/ArLib" />
             <option value="$PROJECT_DIR$/SocialPlus_Autorest_debug" />
+            <option value="$PROJECT_DIR$/aRBaseLib" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/arbaselib2" />
             <option value="$PROJECT_DIR$/artoolkit" />
+            <option value="$PROJECT_DIR$/base-release" />
             <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/tagview" />
           </set>

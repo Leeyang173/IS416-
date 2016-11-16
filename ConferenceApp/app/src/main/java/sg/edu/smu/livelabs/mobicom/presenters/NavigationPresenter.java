@@ -1,6 +1,7 @@
 package sg.edu.smu.livelabs.mobicom.presenters;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -11,6 +12,7 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
@@ -83,6 +85,7 @@ public  class NavigationPresenter extends ViewPresenter<NavigationView> {
 
     @Override
     protected void onLoad(Bundle savedInstanceState) {
+
         super.onLoad(savedInstanceState);
         mainActivity.currentTab = MainActivity.OTHER_TAB;
         mainActivity.setVisibleBottombar(View.VISIBLE);
@@ -189,6 +192,7 @@ public  class NavigationPresenter extends ViewPresenter<NavigationView> {
             }
             try {
                 test();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -207,10 +211,10 @@ public  class NavigationPresenter extends ViewPresenter<NavigationView> {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                // Flow.get(getView().getContext()).set(new ARNavigationScreen());
-                try {
-                    test();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                Context context = mainActivity.getContext();
+                Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage("org.artoolkit.ar.samples");
+                if (launchIntent != null) {
+                    context.startActivity(launchIntent);//null pointer check in case package name was not found
                 }
             }
         });

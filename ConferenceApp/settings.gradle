@@ -1,1 +1,1 @@
-include ':app', ':tagview', ':SocialPlus_Autorest_debug', ':lib', ':artoolkit'
+include ':app', ':tagview', ':SocialPlus_Autorest_debug', ':lib', ':artoolkit', ':aRBaseLib', ':arbaselib2', ':ArLib', ':ARToolKitSimple', ':base-release'

@@ -138,7 +138,7 @@ dependencies {
     compile 'me.itangqi.waveloadingview:library:0.2.0'
     compile project(':tagview')
     compile project(':SocialPlus_Autorest_debug')
-    compile files('libs/ARToolKitSimple.jar')
+    compile project(':aRBaseLib')
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -6,6 +6,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import sg.edu.smu.livelabs.mobicom.DaggerService;
 import sg.edu.smu.livelabs.mobicom.R;
+import sg.edu.smu.livelabs.mobicom.flow.FramePathContainerView;
 import sg.edu.smu.livelabs.mobicom.presenters.ARNavigationPresenter;
 import sg.edu.smu.livelabs.mobicom.presenters.screen.ARNavigationScreenComponent;
 
@@ -28,6 +30,9 @@ public class ARNavigationView extends RelativeLayout {
 
     @Inject
     public ARNavigationPresenter presenter;
+    @Bind(R.id.mainLayout)
+    public FrameLayout arLayout;
+
     public ARNavigationView(Context context, AttributeSet attrs) {
         super(context, attrs);
         DaggerService.<ARNavigationScreenComponent>getDaggerComponent(context).inject(this);
